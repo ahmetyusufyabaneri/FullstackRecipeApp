@@ -11,6 +11,8 @@ const idControl = (req, res, next) => {
     });
   }
 
+  req.foundRecipe = found;
+
   next();
 };
 

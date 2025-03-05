@@ -57,8 +57,36 @@ export const createRecipe = (req, res) => {
   });
 };
 
-export const getRecipe = (req, res) => {};
+export const getRecipe = (req, res) => {
+  res.status(200).json({
+    message: "Recipe found!",
+    recipe: req.foundRecipe,
+  });
+};
 
-export const updateRecipe = (req, res) => {};
+export const updateRecipe = (req, res) => {
+  const updated = { ...req.foundRecipe, ...req.body };
 
-export const deleteRecipe = (req, res) => {};
+  const index = data.findIndex((item) => item.id === req.params.id);
+
+  data.splice(index, 1, updated);
+
+  writeRecipes(data);
+
+  res.status(200).json({
+    message: "Recipe updated!",
+    recipe: updated,
+  });
+};
+
+export const deleteRecipe = (req, res) => {
+  const index = data.findIndex((item) => item.id === req.params.id);
+
+  data.splice(index, 1);
+
+  writeRecipes(data);
+
+  res.status(204).json({
+    message: "Recipe deleted!",
+  });
+};
