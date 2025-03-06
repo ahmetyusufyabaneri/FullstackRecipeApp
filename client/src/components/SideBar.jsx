@@ -6,8 +6,9 @@ const SideBar = () => {
     <aside className="h-screen flex flex-col justify-between items-center p-3 max-md:p-2 max-md:gap-20 max-md:justify-normal">
       <img src="/logo.jpg" className="max-w-20 md:max-w-40" />
       <nav className="flex flex-col gap-20">
-        {links.map((link) => (
+        {links.map((link, index) => (
           <NavLink
+            key={index}
             to={link.path}
             className="flex items-center gap-4 text-xl text-gray-400"
           >
