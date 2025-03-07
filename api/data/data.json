@@ -121,5 +121,27 @@
     "servingSuggestion": "Kısır can be served with lettuce leaves.",
     "id": "27d0ce23-4433-4e68-bd89-64da186734ca",
     "photo": "https://picsum.photos/seed/27d0ce23-4433-4e68-bd89-64da186734ca/200/300"
+  },
+  {
+    "recipeName": "Spiced Apple Cider",
+    "category": "Beverage",
+    "recipeTime": 30,
+    "servingSuggestion": "Serve warm in mugs, garnished with cinnamon sticks.",
+    "ingredients": [
+      "apple cider",
+      "orange slices",
+      "cinnamon sticks",
+      "whole cloves",
+      "star anise"
+    ],
+    "instructions": [
+      "Combine apple cider, orange slices, cinnamon sticks, cloves, and star anise in a large pot.",
+      "Bring to a simmer over medium heat and let it simmer for at least 20 minutes.",
+      "Strain the cider to remove spices and orange slices.",
+      "Serve warm."
+    ],
+    "image": "https://picsum.photos/577",
+    "id": "a13290b8-eac3-4242-9dc9-1c5ec2676842",
+    "photo": "https://picsum.photos/seed/a13290b8-eac3-4242-9dc9-1c5ec2676842/200/300"
   }
 ]
