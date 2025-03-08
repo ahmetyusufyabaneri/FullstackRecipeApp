@@ -90,7 +90,7 @@
     "category": "Beverage",
     "recipeTime": 14,
     "servingSuggestion": "in a glass...\n",
-    "ingredients": ["sour cherry", "water"],
+    "ingredients": ["sour cherry", "ice", "water"],
     "instructions": ["sour cherry.."],
     "image": "https://picsum.photos/576",
     "id": "682b6aa3-6e61-443d-8dad-ff9963338e97"
@@ -120,7 +120,7 @@
     "recipeTime": 20,
     "servingSuggestion": "Kısır can be served with lettuce leaves.",
     "id": "27d0ce23-4433-4e68-bd89-64da186734ca",
-    "photo": "https://picsum.photos/seed/27d0ce23-4433-4e68-bd89-64da186734ca/200/300"
+    "image": "https://picsum.photos/seed/27d0ce23-4433-4e68-bd89-64da186734ca/200/300"
   },
   {
     "recipeName": "Spiced Apple Cider",

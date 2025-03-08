@@ -1,6 +1,6 @@
 const Sort = () => {
   return (
-    <select className="bg-white p-2 rounded-lg outline-none">
+    <select className="bg-white p-2 rounded-lg outline-none cursor-pointer">
       <option selected disabled>
         Duration
       </option>
