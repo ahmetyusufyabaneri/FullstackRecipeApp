@@ -9,11 +9,11 @@ const SideBar = () => {
         {links.map((link, index) => (
           <NavLink
             key={index}
-            to={link.path}
+            to={link?.path}
             className="flex items-center gap-4 text-xl text-gray-400"
           >
-            <span className="max-md:text-2xl">{link.icon}</span>
-            <span className="max-md:hidden">{link.title}</span>
+            <span className="max-md:text-2xl">{link?.icon}</span>
+            <span className="max-md:hidden">{link?.title}</span>
           </NavLink>
         ))}
       </nav>

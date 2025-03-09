@@ -1,6 +1,9 @@
-const Sort = () => {
+const Sort = ({ setSort }) => {
   return (
-    <select className="bg-white p-2 rounded-lg outline-none cursor-pointer">
+    <select
+      onChange={(e) => setSort(e.target.value)}
+      className="bg-white p-2 rounded-lg outline-none cursor-pointer"
+    >
       <option selected disabled>
         Duration
       </option>
