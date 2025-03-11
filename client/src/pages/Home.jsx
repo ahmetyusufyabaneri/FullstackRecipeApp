@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { api } from "../api";
+import api from "../api";
 import Loader from "../components/Loader";
 import Card from "../components/Card";
 import SearchInput from "../components/SearchInput";

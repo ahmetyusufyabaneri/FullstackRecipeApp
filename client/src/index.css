@@ -3,3 +3,10 @@
 .active {
     color: #000;
 }
+
+@layer components {
+    .input {
+        @apply bg-white p-2 rounded-md focus:outline-red-400
+    }
+}
+
