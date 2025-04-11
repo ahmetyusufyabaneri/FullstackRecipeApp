@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { links } from "../constants";
 
 const SideBar = () => {
   return (
     <aside className="h-screen flex flex-col justify-between items-center p-3 max-md:p-2 max-md:gap-20 max-md:justify-normal">
-      <img src="/logo.jpg" className="max-w-20 md:max-w-40" />
+      <Link to={"/"}>
+        <img src="/logo.jpg" className="max-w-20 md:max-w-40" />
+      </Link>
       <nav className="flex flex-col gap-20">
         {links.map((link, index) => (
           <NavLink
