@@ -32,17 +32,19 @@ const Home = () => {
         ) : error ? (
           <Error info={error?.message} refetch={refetch} />
         ) : (
-          <>
-            <div className="flex items-center justify-between">
-              <h1 className="text-3xl my-4">{data?.length} Recipe Found</h1>
-              <Sort setSort={setSort} />
-            </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {data.map((item, index) => (
-                <Card key={index} recipe={item} />
-              ))}
-            </div>
-          </>
+          data && (
+            <>
+              <div className="flex items-center justify-between">
+                <h1 className="text-3xl my-4">{data?.length} Recipe Found</h1>
+                <Sort setSort={setSort} />
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {data.map((item, index) => (
+                  <Card key={index} recipe={item} />
+                ))}
+              </div>
+            </>
+          )
         )}
       </section>
     </main>

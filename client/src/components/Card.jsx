@@ -1,8 +1,9 @@
 import { FaRegClock } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Card = ({ recipe }) => {
   return (
-    <div className="bg-white rounded-md p-4">
+    <Link to={`/detail/${recipe.id}`} className="bg-white rounded-md p-4">
       <div className="relative">
         <img
           src={recipe?.image}
@@ -26,7 +27,7 @@ const Card = ({ recipe }) => {
           <p className="line-clamp-1">{recipe?.ingredients[2]}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
