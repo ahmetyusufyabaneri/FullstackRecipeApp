@@ -5,6 +5,8 @@ import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaTrashCan } from "react-icons/fa6";
+import { GiMeal } from "react-icons/gi";
+import { RiTimerLine } from "react-icons/ri";
 
 const Detail = () => {
   const { id } = useParams();
@@ -37,7 +39,23 @@ const Detail = () => {
       ) : error ? (
         <Error />
       ) : (
-        data && <div>{data?.recipeName}</div>
+        data && (
+          <div className="mt-12">
+            <h1 className="text-red-400 text-2xl font-semibold">
+              {data?.recipeName}
+            </h1>
+            <div className="flex gap-4">
+              <div className="badge">
+                <GiMeal />
+                <span>{data?.category}</span>
+              </div>
+              <div className="badge">
+                <RiTimerLine />
+                <span>{data?.recipeTime} min</span>
+              </div>
+            </div>
+          </div>
+        )
       )}
     </div>
   );
