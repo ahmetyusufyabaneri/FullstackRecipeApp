@@ -16,4 +16,8 @@
   .badge {
     @apply flex items-center gap-2 bg-yellow-500 text-white font-semibold py-2 px-5 rounded-lg;
   }
+
+  .detail-title {
+    @apply text-red-400 text-2xl font-bold mb-4;
+  }
 }
