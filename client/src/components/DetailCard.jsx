@@ -2,7 +2,6 @@ import { GiMeal } from "react-icons/gi";
 import { RiTimerLine } from "react-icons/ri";
 
 const DetailCard = ({ data }) => {
-  console.log(data);
   return (
     <div className="mt-12">
       <h1 className="detail-title">{data?.recipeName}</h1>
@@ -26,6 +25,20 @@ const DetailCard = ({ data }) => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="my-4">
+        <h1 className="detail-title">Instructions</h1>
+        <ol className="list-decimal">
+          {data?.instructions.map((instruction, index) => (
+            <li key={index} className="text-lg font-bold">
+              {instruction}
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div className="my-4">
+        <h1 className="detail-title">Instructions</h1>
+        <p className="text-lg font-bold">{data?.servingSuggestion}</p>
       </div>
     </div>
   );

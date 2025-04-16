@@ -4,8 +4,8 @@ import api from "../api";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { FaTrashCan } from "react-icons/fa6";
 import DetailCard from "../components/DetailCard";
+import DeleteButton from "../components/DeleteButton";
 
 const Detail = () => {
   const { id } = useParams();
@@ -26,10 +26,7 @@ const Detail = () => {
           <IoMdArrowRoundBack />
           <span>Back</span>
         </Link>
-        <button className="button bg-red-500 flex items-center gap-2 hover:bg-red-600">
-          <FaTrashCan />
-          <span>Delete</span>
-        </button>
+        <DeleteButton productId={data?.id} />
       </div>
       {isLoading ? (
         <Loader />
