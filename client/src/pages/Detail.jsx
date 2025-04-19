@@ -26,6 +26,12 @@ const Detail = () => {
           <IoMdArrowRoundBack />
           <span>Back</span>
         </Link>
+        <Link
+          to={`/update/${data?.id}`}
+          className="button bg-sky-600 flex items-center gap-2 hover:bg-sky-700"
+        >
+          Update
+        </Link>
         <DeleteButton productId={data?.id} />
       </div>
       {isLoading ? (

@@ -1,8 +1,24 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Field from "./Field";
 import Select from "react-select/creatable";
 
-const Form = ({ handleSubmit, setIngredients }) => {
+const Form = ({ mutate }) => {
+  const [ingredients, setIngredients] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    let newRecipe = Object.fromEntries(formData.entries());
+
+    newRecipe.instructions = newRecipe.instructions.split(",");
+
+    newRecipe.ingredients = ingredients;
+
+    mutate(newRecipe);
+  };
   return (
     <form
       onSubmit={handleSubmit}
