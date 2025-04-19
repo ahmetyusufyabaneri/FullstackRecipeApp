@@ -4,6 +4,7 @@ import api from "../api";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { MdEdit } from "react-icons/md";
 import DetailCard from "../components/DetailCard";
 import DeleteButton from "../components/DeleteButton";
 
@@ -26,13 +27,16 @@ const Detail = () => {
           <IoMdArrowRoundBack />
           <span>Back</span>
         </Link>
-        <Link
-          to={`/update/${data?.id}`}
-          className="button bg-sky-600 flex items-center gap-2 hover:bg-sky-700"
-        >
-          Update
-        </Link>
-        <DeleteButton productId={data?.id} />
+        <div className="flex items-center gap-2">
+          <Link
+            to={`/update/${data?.id}`}
+            className="button bg-sky-600 flex items-center gap-2 hover:bg-sky-700"
+          >
+            <MdEdit />
+            <span>Update</span>
+          </Link>
+          <DeleteButton productId={data?.id} />
+        </div>
       </div>
       {isLoading ? (
         <Loader />
